@@ -1,5 +1,5 @@
 var price = null;
-var color =null;
+var color;
 var color_modifier= null;
 var colors =[
     {
@@ -19,7 +19,7 @@ var colors =[
         modifier: 150
     }
 ];
-var memory =null;
+var memory;
 var memory_modifier = null;
 var memories = [
     {
@@ -38,13 +38,13 @@ var memories = [
 
 while (price === null && memory !== null && color !== null) {
 
-    color = prompt("Color?");
+    color = prompt("Color? (Black,Red,Silver,Gold)");
 
     if (color === null) {
         alert("Отмена!");
     }
 
-    else memory = prompt("Memory?");
+    else memory = prompt("Memory? (64,128,256)");
 
     for (var i = 0; i < colors.length; i++) {
         if (color === colors[i].color) {
@@ -53,7 +53,7 @@ while (price === null && memory !== null && color !== null) {
     }
 
     for (var j = 0; j < memories.length; j++) {
-        if (+memory === memories[i].value) {
+        if (+memory === memories[j].value) {
             memory_modifier = memories[j].modifier;
         }
     }

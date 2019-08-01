@@ -123,36 +123,36 @@
 //   console.log(memories[i]);
 // }
 
-// var price = null;
-// var errorMessage;
-// var memory;
-// var memories = [
-//   {
-//     value: 64,
-//     price: 500
-//   },
-//   {
-//     value: 128,
-//     price: 800
-//   },
-//   {
-//     value: 256,
-//     price: 1200
-//   }
-// ];
+var price = null;
+var errorMessage;
+var memory;
+var memories = [
+  {
+    value: 64,
+    price: 500
+  },
+  {
+    value: 128,
+    price: 800
+  },
+  {
+    value: 256,
+    price: 1200
+  }
+];
 
-// while (price === null && memory !== null) {
-//   memory = prompt("Memory?");
-//   if (memory === null) {
-//     alert("Отмена!");
-//   }
-//   for (var i = 0; i < memories.length; i++) {
-//     if (+memory === memories[i].value) {
-//       price = memories[i].price;
-//     }
-//   }
-// }
-// document.write(price);
+while (price === null && memory !== null) {
+  memory = prompt("Memory?");
+  if (memory === null) {
+    alert("Отмена!");
+  }
+  for (var i = 0; i < memories.length; i++) {
+    if (+memory === memories[i].value) {
+      price = memories[i].price;
+    }
+  }
+}
+document.write(price);
 
 // 1. Спрашивать у пользователя цвет телефона и выводить кратинку соответствующую этому цвету (обратить внимание на то, что пользователь имеет возможность ввести память только тогда, когда выбрал цвет)
 // 2*. Цена телефона должна зависеть не только от памяти, но и от цвета. К примеру: silver на 128 стоит 500$, а black на 128 стоит 510$. И так далее. Сделать это нужно без создания всех комбинаций телефонов и без кучи if(){}else{}
