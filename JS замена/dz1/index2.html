@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DZ1.2</title>
+</head>
+<body>
+ <div id="wrapper"></div>
+<input type="button" onclick="createParagraph()" value="Button">
+<script>
+    function createParagraph() {
+        var div = document.getElementById('wrapper');
+        var paragraph = document.createElement('p');
+
+        paragraph.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi perspiciatis quae quas. Accusantium ad aliquam atque cupiditate dolore ducimus eveniet fuga incidunt maiores molestiae, nostrum quaerat qui quo repudiandae sit?";
+
+        if (div.children.length === 10) {
+
+            while(div.firstChild) {
+                div.removeChild(div.firstChild)
+            }
+
+            return;
+        }
+
+        div.appendChild(paragraph);
+    }
+</script>
+</body>
+</html>
